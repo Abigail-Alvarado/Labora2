@@ -162,7 +162,7 @@ namespace Labora2
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(226, 302);
+            this.button2.Location = new System.Drawing.Point(229, 301);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(125, 45);
             this.button2.TabIndex = 32;
