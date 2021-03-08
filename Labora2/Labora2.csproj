@@ -75,6 +75,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="vehiculos.cs" />
+    <EmbeddedResource Include="Alquilado.resx">
+      <DependentUpon>Alquilado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="carro.resx">
       <DependentUpon>carro.cs</DependentUpon>
     </EmbeddedResource>
