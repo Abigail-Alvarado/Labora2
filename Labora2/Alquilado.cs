@@ -14,11 +14,11 @@ namespace Labora2
     public partial class Alquilado : Form
     {
         List<clientes> clientes = new List<clientes>();
-        string archivo1 = "Registroclientes.txt";
+        string archivoC = "Registroclientes.txt";
         List<vehiculos> vehiculos = new List<vehiculos>();
-        string archivo2 = "Registrovehículos.txt";
+        string archivoV = "Registrovehículos.txt";
         List<Alquilados> alquilados = new List<Alquilados>();
-        string archivo4 = "alquilados.txt";
+        string archivoA = "Registroalquilados.txt";
         public Alquilado()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace Labora2
         }
         void leer_datos()
         {
-            FileStream stream = new FileStream(archivo1, FileMode.Open, FileAccess.Read);
+            FileStream stream = new FileStream(archivoC, FileMode.Open, FileAccess.Read);
             StreamReader reader = new StreamReader(stream);
             while (reader.Peek() > -1)
             {
@@ -44,7 +44,7 @@ namespace Labora2
             reader.Close();
 
 
-            FileStream stream2 = new FileStream(archivo2, FileMode.Open, FileAccess.Read);
+            FileStream stream2 = new FileStream(archivoV, FileMode.Open, FileAccess.Read);
             StreamReader reader2 = new StreamReader(stream2);
             while (reader2.Peek() > -1)
             {
@@ -61,7 +61,7 @@ namespace Labora2
 
 
 
-            FileStream stream4 = new FileStream(archivo4, FileMode.Open, FileAccess.Read);
+            FileStream stream4 = new FileStream(archivoA, FileMode.Open, FileAccess.Read);
             StreamReader reader4 = new StreamReader(stream4);
             while (reader4.Peek() > -1)
             {
@@ -81,7 +81,7 @@ namespace Labora2
         }
         public void guardar()
         {
-            FileStream stream2 = new FileStream(archivo4, FileMode.OpenOrCreate, FileAccess.Write);
+            FileStream stream2 = new FileStream(archivoA, FileMode.OpenOrCreate, FileAccess.Write);
             StreamWriter writer2 = new StreamWriter(stream2);
 
             for (int i = 0; i < alquilados.Count; i++)
