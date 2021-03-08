@@ -46,7 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alquilado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alquilado.Designer.cs">
+      <DependentUpon>Alquilado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Alquilados.cs" />
+    <Compile Include="carro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="carro.Designer.cs">
+      <DependentUpon>carro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cliente.Designer.cs">
+      <DependentUpon>cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="clientes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
