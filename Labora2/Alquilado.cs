@@ -163,11 +163,11 @@ namespace Labora2
             comboBox2.DataSource = vehiculos;
             tempalquilados.Color = comboBox2.SelectedValue.ToString();
 
-            comboBox2.ValueMember = "Costo_Kilometro";
+            comboBox2.ValueMember = "PrecioK";
             comboBox2.DataSource = vehiculos;
             tempalquilados.Preciok = Convert.ToInt32(comboBox2.SelectedValue);
           
-            comboBox2.ValueMember = "Precio_kilometro";
+            comboBox2.ValueMember = "PrecioK";
             comboBox2.DataSource = vehiculos;
             int kilometro = Convert.ToInt32(comboBox2.SelectedValue);
             int kmrecorrido = Convert.ToInt32(textBox1.Text);

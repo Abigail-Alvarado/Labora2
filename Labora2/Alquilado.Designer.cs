@@ -218,7 +218,7 @@ namespace Labora2
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(630, 84);
+            this.button1.Location = new System.Drawing.Point(620, 84);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(179, 44);
             this.button1.TabIndex = 53;
@@ -228,7 +228,7 @@ namespace Labora2
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(829, 36);
+            this.button2.Location = new System.Drawing.Point(620, 37);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(189, 41);
             this.button2.TabIndex = 54;
@@ -238,7 +238,7 @@ namespace Labora2
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(630, 35);
+            this.button3.Location = new System.Drawing.Point(815, 35);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(179, 42);
             this.button3.TabIndex = 55;
