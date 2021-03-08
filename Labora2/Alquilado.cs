@@ -103,5 +103,115 @@ namespace Labora2
             vmenu.Show();
             this.SetVisibleCore(false);
         }
+        void mostrar()
+        {
+
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = clientes;
+            dataGridView1.Refresh();
+
+            dataGridView2.DataSource = null;
+            dataGridView2.DataSource = vehiculos;
+            dataGridView2.Refresh();
+
+            dataGridView3.DataSource = null;
+            dataGridView3.DataSource = alquilados;
+            dataGridView3.Refresh();
+
+
+        }
+
+        void encontrarmayor()
+        {
+            Alquilados tempalquilados = new Alquilados();
+
+
+            (alquilados = alquilados.OrderByDescending(p => p.Total).ToList()).ToString();
+            comboBox3.ValueMember = "Total";
+            comboBox3.DataSource = null;
+            comboBox3.DataSource = alquilados;
+            comboBox3.Refresh();
+
+        }
+        void limpiar()
+        {
+            comboBox1.Text = null;
+            comboBox2.Text = null;
+            textBox1.Text = null;
+            comboBox1.Refresh();
+            comboBox2.Refresh();
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Alquilados tempalquilados = new Alquilados();
+            tempalquilados.Nombre = comboBox1.SelectedValue.ToString();
+            comboBox2.ValueMember = "Placa";
+            comboBox2.DataSource = vehiculos;
+            tempalquilados.Placa = comboBox2.SelectedValue.ToString();
+
+            comboBox2.ValueMember = "Marca";
+            comboBox2.DataSource = vehiculos;
+            tempalquilados.Marca = comboBox2.SelectedValue.ToString();
+
+
+            comboBox2.ValueMember = "Modelo";
+            comboBox2.DataSource = vehiculos;
+            tempalquilados.Modelo = comboBox2.SelectedValue.ToString();
+
+            comboBox2.ValueMember = "Color";
+            comboBox2.DataSource = vehiculos;
+            tempalquilados.Color = comboBox2.SelectedValue.ToString();
+
+            comboBox2.ValueMember = "Precio_kilometro";
+            comboBox2.DataSource = vehiculos;
+            tempalquilados.Preciok = Convert.ToInt32(comboBox2.SelectedValue);
+
+            tempalquilados.Fechad = Convert.ToDateTime(dateTimePicker2.Text);
+
+            comboBox2.ValueMember = "Precio_kilometro";
+            comboBox2.DataSource = vehiculos;
+            int kilometro = Convert.ToInt32(comboBox2.SelectedValue);
+            int kmrecorrido = Convert.ToInt32(textBox1.Text);
+            tempalquilados.Total = (kilometro * kmrecorrido);
+
+            alquilados.Add(tempalquilados);
+            guardar();
+
+            limpiar();
+            mostrar();
+            MessageBox.Show("Alquiler realizado correctamente");
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            comboBox1.Enabled = true;
+            comboBox2.Enabled = true;
+            dateTimePicker1.Enabled = true;
+            dateTimePicker2.Enabled = true;
+            textBox1.Enabled = true;
+
+            comboBox1.DisplayMember = "Nit";
+            comboBox1.ValueMember = "Nombre";
+            comboBox1.DataSource = null;
+            comboBox1.DataSource = clientes;
+            comboBox1.Refresh();
+
+            comboBox2.DisplayMember = "Placa";
+            comboBox2.DataSource = null;
+            comboBox2.DataSource = vehiculos;
+            comboBox2.Refresh();
+            button3.Visible = false;
+        }
+
+        private void Alquilado_Load(object sender, EventArgs e)
+        {
+            leer_datos();
+            mostrar();
+            encontrarmayor();
+            label10.Text = "Q " + comboBox3.Text;
+            comboBox1.Refresh();
+            comboBox2.Refresh();
+        }
     }
 }

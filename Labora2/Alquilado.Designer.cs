@@ -234,6 +234,7 @@ namespace Labora2
             this.button2.TabIndex = 54;
             this.button2.Text = "Agregar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -243,6 +244,7 @@ namespace Labora2
             this.button3.TabIndex = 55;
             this.button3.Text = "Desbloqueo";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // textBox1
             // 
@@ -280,6 +282,7 @@ namespace Labora2
             this.Controls.Add(this.label1);
             this.Name = "Alquilado";
             this.Text = "Alquilado";
+            this.Load += new System.EventHandler(this.Alquilado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
